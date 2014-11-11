@@ -2,6 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 
+public enum Team
+{
+    None,
+    Red,
+    Blue
+}
+
 
 public class ArenaScript : MonoBehaviour {
 
@@ -9,11 +16,16 @@ public class ArenaScript : MonoBehaviour {
     int ElapsedTime = 0;
     float startTime = 0f;
 
+    public List<EntityScript> BlueTeam;
+    public List<EntityScript> RedTeam;
+    public List<EntityScript> NoTeamEnemies;
 
+    public static ArenaScript Instance = null;
 
 	// Use this for initialization
 	void Start () 
     {
+        Instance = this;
         PowerUps = new List<GameObject>();
         StartCoroutine("OnTick");
 
@@ -29,8 +41,9 @@ public class ArenaScript : MonoBehaviour {
             print(ElapsedTime);
 
         }
-
-
     }
+
+   
+
     
 }

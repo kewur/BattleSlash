@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Battle Slash.CSharp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Battle Slash.CSharp.Editor", "UnityVS.Battle Slash.CSharp.Editor.csproj", "{AD21802E-AA21-2F2A-B8FC-DE86ECF9C580}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Battle Slash.CSharp.Plugins", "UnityVS.Battle Slash.CSharp.Plugins.csproj", "{CC1B4AB8-A375-CBDA-2DFE-F07D175627F6}"
+EndProject
+Project("{1FAC5C55-277D-4884-94A4-83DBDAF57E56}") = "UnityVS.Battle Slash.UnityScript.Plugins", "UnityVS.Battle Slash.UnityScript.Plugins.unityproj", "{056F482A-9163-5D42-2BA5-712DCB3CD888}"
+EndProject
 Project("{06C3D72F-0EBA-46A2-AFEE-5197E65B1782}") = "UnityVS.Battle Slash.Boo.Editor", "UnityVS.Battle Slash.Boo.Editor.booproj", "{E1B76A60-05C1-4F11-D8FD-80BD4B3A8B56}"
 EndProject
 Project("{1FAC5C55-277D-4884-94A4-83DBDAF57E56}") = "UnityVS.Battle Slash.UnityScript.Editor", "UnityVS.Battle Slash.UnityScript.Editor.unityproj", "{C3401639-108C-3108-8FC6-F2BCE9E03E71}"
@@ -29,6 +33,14 @@ Global
 		{AD21802E-AA21-2F2A-B8FC-DE86ECF9C580}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD21802E-AA21-2F2A-B8FC-DE86ECF9C580}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD21802E-AA21-2F2A-B8FC-DE86ECF9C580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC1B4AB8-A375-CBDA-2DFE-F07D175627F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC1B4AB8-A375-CBDA-2DFE-F07D175627F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC1B4AB8-A375-CBDA-2DFE-F07D175627F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC1B4AB8-A375-CBDA-2DFE-F07D175627F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{056F482A-9163-5D42-2BA5-712DCB3CD888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056F482A-9163-5D42-2BA5-712DCB3CD888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056F482A-9163-5D42-2BA5-712DCB3CD888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056F482A-9163-5D42-2BA5-712DCB3CD888}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E1B76A60-05C1-4F11-D8FD-80BD4B3A8B56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E1B76A60-05C1-4F11-D8FD-80BD4B3A8B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1B76A60-05C1-4F11-D8FD-80BD4B3A8B56}.Release|Any CPU.ActiveCfg = Release|Any CPU

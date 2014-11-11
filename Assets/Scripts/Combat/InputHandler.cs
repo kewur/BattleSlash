@@ -38,7 +38,7 @@ public class InputHandler : MonoBehaviour {
     int cont = 0;
 
     private float StartY;
-
+    private float StartXRot;
 	// Use this for initialization
 	void Awake()
     {
@@ -46,6 +46,7 @@ public class InputHandler : MonoBehaviour {
             Debug.LogError("Assign Selection Projector");
 
         StartY = transform.position.y;
+        StartXRot = transform.rotation.eulerAngles.x;
 
         selectionProjectorHeight = 2f;
         lerpHandler = new LerpHandler();
@@ -123,6 +124,12 @@ public class InputHandler : MonoBehaviour {
             if (dist > enemDist)
             {
                 closestEnemy = enemy.transform;
+                Transform target = enemy.transform.FindChild("LockInTarget");
+                Vector3 targetPos = target.position;
+                targetPos.y = transform.position.y;
+
+             //   target.transform.position = targetPos;
+
                 dist = enemDist;
 
             }
@@ -139,8 +146,12 @@ public class InputHandler : MonoBehaviour {
         Vector3 pos = transform.position;
         pos.y = StartY;
 
+        Vector3 rot = transform.rotation.eulerAngles;
+        rot.x = StartXRot;
+
         transform.position = pos;
-        
+   
+
         lerpHandler.OnUpdate();
         
 	}
@@ -149,7 +160,14 @@ public class InputHandler : MonoBehaviour {
     {
         if (LockedInTarget != null)
         {
-            Quaternion rotation = Quaternion.LookRotation(LockedInTarget.transform.position - transform.position);
+
+            Transform target = LockedInTarget.transform.FindChild("LockInTarget");
+            Vector3 lockInTargetPlayerLevel = target.position;
+            lockInTargetPlayerLevel.y = PlayerScript.mSingleton.transform.position.y;
+
+            target.position = lockInTargetPlayerLevel;
+
+            Quaternion rotation = Quaternion.LookRotation(target.transform.position - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
         }
 

@@ -5,6 +5,7 @@ public class EntityScript : MonoBehaviour {
 
     protected int ShieldonGoingLerpTID = -1;
     protected int ShieldonGoingLerpQID = -1;
+    public Team team;
     public GameObject ShieldHand;
     public GameObject WeaponHand;
     public Transform[] shieldStartEnd;
